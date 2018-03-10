@@ -13,17 +13,17 @@ import { Employee } from '../Shared/employee.model';
 })
 
 export class EmployeeDetailComponent implements OnInit {
-  employeelist: Employee[];
+  employeeList: Employee[];
   constructor(private employeeService:EmployeeService) { }
 
   ngOnInit() {
     var emp = this.employeeService.getData();
     emp.snapshotChanges().subscribe(item=>{
-      this.employeelist = [];
+      this.employeeList = [];
       item.forEach(element=>{
         var empData = element.payload.toJSON();
         empData["$key"] = element.key;
-        this.employeelist.push(empData as Employee);
+        this.employeeList.push(empData as Employee);
       });
     });
   }
