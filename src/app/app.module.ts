@@ -10,13 +10,16 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { Student3Component } from './student3/student3.component';
 import { StudentComponent } from './student/student.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeDetailComponent,
+    Student3Component,
     StudentComponent,
 
     
